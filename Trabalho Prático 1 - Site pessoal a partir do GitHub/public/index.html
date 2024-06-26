@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+      
+        /* Corrigindo e adicionando regras para telas menores que 768px */
+        @media (max-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 2rem; /* Menor que o original para caber em telas menores */
+          }
+      
+          #nome, h2 {
+            font-size: 1.25rem; /* Tamanho de fonte reduzido para pequenas telas */
+          }
+      
+          header div.container, main section {
+            padding: 10px; /* Reduzindo padding para dar mais espaço */
+          }
+      
+          img {
+            width: 200px; 
+            height: 200px; 
+          }
+        }
+      
+        
+        @media (max-width: 320px) {  
+          h2 {
+            font-size: 1rem;
+            margin-bottom: -20px;
+          }
+
+          img.rounded-circle {
+            margin-top: -25px;
+            margin-left: -10px; 
+            width: 120px;
+            height: 120px;
+          }
+
+          #Perfil {
+            flex-direction: column; 
+            align-items: center;
+          }
+      
+          .nav {
+            flex-direction: column; 
+          }
+          
+        }
+      </style>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="customJ" viewBox="0 0 48 72">
+            <title>Letter J</title>
+            <path d="M 12 0 C 12 0, 24 0, 24 12 V 50 C 24 58, 18 72, 6 72 H 0 V 60 H 6 C 12 60, 12 54, 12 48 V 12 H 12 Z" fill="white"/>
+          </symbol>
+          <symbol id="carousel-icon" viewBox="0 0 16 16">
+            <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
+          </symbol>
+        <symbol id="repo" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+        </symbol>
+        <symbol id="github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+        </symbol>
+        <symbol id="people-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </symbol>
+        <symbol id="insta-ico" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+      </svg>
+      
+
+        <header>
+            <div class="px-3 py-2 bg-dark">
+                <div class="container">
+                  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="index.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                      <svg class="me-2" width="24" height="36" role="img"><use xlink:href="#customJ"/></svg>
+                      <p id = "logo" class="mb-0 align-self-end">ean Carlos Lopes Lellis</p>
+                    </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                  <li>
+                    <a href="#Perfil" class="nav-link">
+                      <div id="secao1">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                        <p>Perfil Github</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Repositorio" class="nav-link">
+                      <div id="secao2">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#repo"/></svg>
+                        <p>Repositorios</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Carousel" class="nav-link">
+                      <div id="secao3">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#carousel-icon"/></svg>
+                        <p>Carousel</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main>
+            <section id="Perfil" class="px-4 my-5">
+                <div id="self-info" class="d-flex align-items-center justify-content-center justify-content-lg-start">
+                    <img src="" id = "imgPerfil" width="250px" height="250px" class="rounded-circle mr-lg-60">
+                    <div class="description">
+                        <h2 id = "nome"></h2>
+                        <p>Oi, eu sou o Jean, um entusiasta por tecnologia, desde os meus 10 anos venho estudando diversos temas sobre tecnologia. Desde que me conheço por gente eu sempre fui muito curioso com relação a tudo e nunca poupava esforços para saber o porque de algo acontecer, em 2014 foi a primeira vez que tive contato com a internet e dando de cara com tudo aquilo eu fiquei maravilhado, mas muito curioso ao mesmo tempo pra poder saber como aquilo tudo funciona, desde então venho sempre atualizando meus conhecimentos em tecnologia o que me motivou bastante para cursar graduação em Ciências da Computação na PUC MINAS - Unidade Coração Eucaristico. </p>
+                        <p style="display: inline;"><b>Localização:</b></p> <p id = "local" style="display: inline;"> </p>
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-left text-small my-3">
+                          <li>
+                            <div id="instagram">
+                              <a href="https://www.instagram.com/jeancar011/">
+                                <svg class="bi d-block mx-auto mb-0" width="35" height="35"><use xlink:href="#insta-ico"/></svg>
+                              </a>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="github">
+                              <a href="https://www.github.com/JeanCarlos0112">
+                                <svg class="bi d-block mx-2 mb-0" width="35" height="35"><use xlink:href="#github"/></svg>
+                              </a>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="linkedin">
+                              <a href="https://www.linkedin.com/in/jeancarll/">
+                                <svg class="bi d-block mx-1 mb-0" width="35" height="35"><use xlink:href="#linkedin"/></svg>
+                              </a>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="Repositorio" >
+              <div id="repo-header" class="d-flex align-items-center justify-content-center justify-content-lg-start mx-5 px-1">
+                  <h1>Repositorios</h1>
+              </div>
+              <div class="row row-cols-1 row-cols-md-2 g-4 my-4 px-5">
+                <div class="col">
+                  <a href="repo.html#repo-monty-hall" class="text-decoration-none">
+                    <div class="card">
+                      <img src="assets/img/lets-make-a-deal-monty-hall.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Monty Hall</h5>
+                        <p class="card-text">Esta é uma aplicação que representa o programa "Monty Hall" e seus circuitos de decisões elaborado em C</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="repo2.html#repo-pacman" class="text-decoration-none">
+                    <div class="card">
+                      <img src="assets/img/spaceshooter.jpg" width= "280px" height="280px" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Scratch Space Shooter Game</h5>
+                        <p class="card-text">Um space shooter desenvolvido no Scratch com o intuito de aprofundar meus conhecimentos em logica de programação e desenvolvimento de games </p>
+                      </div>
+                  </a>
+                  </div>
+                </div>
+                <div class="col">
+                  <a href="repo3.html#repo-workshop" class="text-decoration-none">
+                    <div class="card">
+                      <img src="assets/img/workshopjs.png" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Workshop de Node.js e Express</h5>
+                        <p class="card-text">Site elaborado a partir de rotas construidas para puxar a informação e exibi-la no site podendo realizar até queries, pois a aplicação foi feita no modelo CRUD </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="repo4.html#repo-sql" class="text-decoration-none">
+                    <div class="card">
+                      <img src="assets/img/sql.png" width= "280px" height="280px" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Aplicação com Conexão com a Database</h5>
+                        <p class="card-text">Aplicação simples que quando executada puxa todas as informações da database</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section id="Carousel" >
+              <div id="suggestion-header" class="d-flex align-items-center justify-content-center justify-content-lg-start mx-5 px-1">
+                  <h1>Conteudos Sugeridos</h1>
+              </div>
+
+              <div id="carouselExampleCaptions" class="carousel slide my-5 px-5" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="https://www.scielo.br/j/ea/a/c4sqqrthGMS3ngdBhGWtKhh#">
+                      <img src="assets/img/imagemdedestaque_doi_artcient.png" width="500px" height="450px" class="d-block w-100">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Artigos</h5>
+                        <p>Inteligências artificias, o que são e o seu impacto no mundo</p>
+                      </div>
+                    </a>
+                    </div>
+                  <div class="carousel-item">
+                    <a href="https://pesquisa.codigofonte.com.br/2024">
+                      <img src="assets/img/Pesquisa.png" width="500px" height="450px" class="d-block w-100" >
+                      <div class="carousel-caption d-none d-md-block">
+                       <h5>Situação Salarial na Área de Tecnologia</h5>
+                       <p>Pesquisa que realiza uma amostragem para saber a situação salarial das profissões acerca de tecnologia no Brasil</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://www.youtube.com/watch?v=M5gmG4rvNe4">
+                      <img src="assets/img/hq720.jpg" width="500px" height="450px" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>DLSS, o que é e como funciona? DLSS 2.0, DLSS 3.0, DLSS 3.5.</h5>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://www.youtube.com/watch?v=uaBeBWFwln4">
+                      <img src="assets/img/hq720 (1).jpg" width="500px" height="450px" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark">Irã ameaça Israel em caso de retaliação</h5>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://www.youtube.com/playlist?list=PLx4x_zx8csUgop9qBqm6ReuNa3XraZBrc">
+                      <img src="assets/img/bootstrap-social.png" width="500px" height="450px" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Bootstrap</h5>
+                        <p>Curso de bootstrap, como usar e fazer um site ao seu gosto</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+
+        <section id="Co-workers">
+          <div id="co-workers-header" class="d-flex align-items-center justify-content-center justify-content-lg-start mx-5 px-1">
+            <h1>Colegas de Trabalho</h1>
+          </div>
+          <div class="d-flex align-items-center justify-content-center justify-content-lg-start my-5 px-5">
+            <div class="container">
+              <img src="assets/img/file.jpg" width="150px" height="150px" class="rounded-circle">
+              <p class="my-2 mx-4"><b>Pedro Barroso</b></p>
+            </div>
+            <div class="container">
+              <img src="assets/img/file1.jpg" width="150px" height="150px" class="rounded-circle">
+              <p class="my-2 mx-4"><b>Pedro Ferreira</b></p>
+            </div>
+            <div class="container">
+              <img src="assets/img/file2.jpg" width="150px" height="150px" class="rounded-circle">
+              <p class="my-2 mx-4"><b>Antônio Sousa</b></p>
+            </div>
+            <div class="container">
+              <img src="assets/img/file4.jpg" width="150px" height="150px" class="rounded-circle">
+              <p class="my-2 mx-4"><b>Gabriel Lucas</b></p>
+            </div>
+            <div class="container">
+              <img src="assets/img/file5.jpg" width="150px" height="150px" class="rounded-circle">
+              <p class="my-2 mx-4"><b>Kewin Avelar</b></p>
+            </div>
+        </div>
+        </section>
+        </main>
+        <footer>
+          <div class="px-3 py-2 bg-dark text-white ">
+            <div id="copyright" class="container justify-content-center align-items-center"> 
+                <p class="justify-content-center mx-2 my-2">©2024 Developed by Jean Carlos Lopes Lellis</p>
+            </div>
+        </div>
+        </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="bundle.js"></script>
+</html>
+
+  

@@ -1,0 +1,269 @@
+.form-control-dark {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+  
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+
+}
+
+.container p{
+    margin: 0;
+}
+
+
+#inicial:hover{
+    fill:rgb(106, 10, 104);
+}
+
+#secao1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+    fill:#fff;
+}
+
+#secao1:hover{
+    color:rgb(128, 61, 127);
+    fill:rgb(128, 61, 127);
+    /*rgb(135, 16, 133);*/
+    /*rgb(116, 14, 114);*/
+}
+
+#secao1:active{
+    color:rgb(106, 10, 104);
+}
+
+#secao2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+    fill:#fff;
+}
+
+#secao2:hover{
+    color:rgb(128, 61, 127);
+    fill:rgb(128, 61, 127);
+}
+
+#secao2:active{
+    color:rgb(106, 10, 104);
+}
+
+#secao3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+    fill:#fff;
+}
+
+#secao3:hover{
+    color:rgb(128, 61, 127);
+    fill:rgb(128, 61, 127);
+}
+
+#secao3:active{
+    color:rgb(106, 10, 104);
+}
+
+.text-small {
+    font-size: 85%;
+}
+  
+.dropdown-toggle {
+    outline: 0;
+}
+
+#logo {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: bottom;
+    gap: 0px;
+    margin-left: -16px;
+    padding-left: 0;
+}
+
+.mr-lg-60 {
+    margin-right: 60px;
+}
+
+#Perfil .description {
+    margin-bottom: 20px;
+}
+
+#Perfil .description p{
+    font-size: 15px;
+}
+
+
+
+#Perfil img{
+    margin-bottom: 70px;
+}
+
+#Perfil a svg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    fill:black;
+}
+
+#Perfil a svg:hover{
+    fill:rgb(160, 20, 155);
+    /*rgb(135, 16, 133);*/
+    /*rgb(116, 14, 114);*/
+}
+
+#Perfil a svg:active{
+    color:rgb(106, 10, 104);
+}
+
+#repo-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+
+}
+
+#repo-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+.card-body{
+    color: black;
+}
+
+#suggestion-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+
+}
+
+#suggestion-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+
+#co-workers-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+}
+
+#co-workers-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+#repo-montyhall-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+
+}
+
+#repo-montyhall-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+#repo-pacman-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+
+}
+
+#repo-pacman-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+#repo-workshop-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+
+}
+
+#repo-workshop-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+#repo-sql-header{
+    position: relative;
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+
+}
+
+#repo-sql-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: black; 
+}
+
+footer{
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
